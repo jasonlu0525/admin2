@@ -1,0 +1,453 @@
+---
+title: admin
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<section class="d-flex align-items-center justify-content-between mb-32">
+    <ul class="d-flex align-items-center list-unstyled mb-0 fw-bold text-gray-900">
+        <li>
+            <h2 class="fs-4 mb-0">Admin</h2>
+        </li>
+        <li class="ms-4 ms-md-5">
+            <a href="javascript:void(0); " class="  d-flex align-items-center " data-bs-toggle="modal"
+                data-bs-target="#New_Admin">
+                <span href="#" class=" material-icons text-success">
+                    add
+                </span>
+                <h3 class="fs-6 mb-0 ms-3">Add New Admin </h3>
+            </a>
+
+
+        </li>
+    </ul>
+    <ul class="d-flex list-unstyled mb-0">
+        <li>
+            <a href="#" class="material-icons align-middle">
+                search
+            </a>
+        </li>
+        <li class="ms-4">
+            <a href="#" class="material-icons align-middle">
+                notifications
+            </a>
+        </li>
+    </ul>
+    <div class="modal  fade show" id="New_Admin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalScrollableTitle" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content fw-bold px-32 pt-32 pb-3 modal-max-height ">
+                <div class="modal-header p-0 border-0 mb-32">
+                    <h4 class="modal-title fw-bold" id="exampleModalScrollableTitle">New Admin</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 scrollbar-none">
+                    <h5 class="fs-5 mb-3 fw-bold">Account</h5>
+                    <div class="mb-3 input-group-lg">
+                        <label for="addName" class="form-label">Name</label>
+                        <input type="email" class="form-control" id="addName" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-4 input-group-lg">
+                        <label for="addEmail" class="Email-label">Email</label>
+                        <input type="password" class="form-control" id="addEmail">
+                    </div>
+                    <hr class="mb-4">
+
+                    <div class="mb-4">
+                        <h5 class="fs-5 mb-20">Verification</h5>
+                        <div class="d-flex mb-20">
+                            <span class="material-icons text-danger">
+                                warning
+                            </span>
+                            <p class="ms-2 mb-0">Unverified</p>
+                        </div>
+
+                        <a href="javascript:void(0);"
+                            class="d-block btn  text-center text-success py-3 border border-gray-400">Send Verification
+                            Mail
+                        </a>
+
+                    </div>
+                    <hr class="mb-4">
+                    <div class="mb-4 input-group-lg">
+                        <h5 class="fs-5 mb-3 fw-bold">Access Level</h5>
+                        <select class="form-select border-gray-900 fs-6 text-gray-600 py-12">
+                            <option selected>-Choose access level-</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="mb-5">
+                        <h5 class="fs-5 mb-3 fw-bold">Custom Access</h5>
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+                            <label class=" ms-3" for="vbtn-radio1 ">lecture</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                            <label class=" ms-3" for="vbtn-radio2 ">Coupon</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                            <label class=" ms-3" for="vbtn-radio3 ">Message</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+                            <label class=" ms-3" for="vbtn-radio1 ">Setting</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+                            <label class=" ms-3" for="vbtn-radio1 ">task menu</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-0">
+                    <button type="button" class="btn px-32 py-2 btn-outline-success "
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn px-32  py-2 btn-success ">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="row g-0">
+    <table class="col-12 mb-64">
+        <tbody class="d-flex flex-column">
+            <tr class="row  g-0 border-bottom border-gray-900  pb-1">
+                <th class="col-1 col-xl-2">ID</th>
+                <th class="col-3">Name</th>
+                <th class="col-5 col-xl-4">Email</th>
+                <th class="col-2 col-sm-1">Verified</th>
+                <th class="col-1 col-sm-2 "></th>
+            </tr>
+            <tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+                <td class="col-1 col-xl-2">#1</td>
+                <td class="col-3">Emir Wicks</td>
+                <td class="col-5 col-xl-4 text-break">emir.wicks@mail.com</td>
+                <td class="col-2 col-sm-1">Yes</td>
+                <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center  ">
+                    <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0" data-bs-toggle="modal"
+                        data-bs-target="#watch">
+                        remove_red_eye
+                    </a>
+                    <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4" data-bs-toggle="modal"
+                        data-bs-target="#edit">
+                        edit
+                    </a>
+                    <!-- edit -->
+                    <div class="modal  fade show" id="edit" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="exampleModalScrollableTitle" aria-modal="true" role="dialog">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content fw-bold px-32 pt-32 pb-3 modal-max-height ">
+                                <div class="modal-header p-0 border-0 mb-32">
+                                    <h4 class="modal-title fw-bold" id="exampleModalScrollableTitle">Edit Admin</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-0 scrollbar-none">
+                                    <h5 class="fs-5 mb-3 fw-bold">Account</h5>
+                                    <div class="mb-3 input-group-lg">
+                                        <label for="editName" class="form-label">Name</label>
+                                        <input type="text" class="form-control bg-gray-100 border-0" id="editName"
+                                            aria-describedby="emailHelp" value="Emir Wicks" readonly>
+
+                                    </div>
+                                    <div class="mb-4 input-group-lg">
+                                        <label for="editEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control bg-gray-100 border-0" id="editEmail" value="emir.wicks@mail.com" readonly>
+                                    </div>
+                                    <hr class="mb-4">
+
+                                    <div class="mb-4">
+                                        <h5 class="fs-5 mb-20">Verification</h5>
+                                        <div class="d-flex justify-content-between mb-20">
+                                            <div class="d-flex">
+                                                <span class="material-icons text-dark">
+                                                    check_circle
+                                                </span>
+                                                <p class="ms-2 mb-0">Verified</p>
+                                            </div>
+                                            <small class="">2020/4/12</small>
+                                        </div>
+
+                                        <input class="form-control  text-gray-400 bg-white text-center py-3  border-gray-400" type="text" placeholder="Deactivate This Account" aria-label="Disabled input example" disabled="" readonly="">
+                                 
+                                    </div>
+                                    <hr class="mb-4">
+                                    <div class="mb-4 input-group-lg">
+                                        <h5 class="fs-5 mb-3 fw-bold">Access Level</h5>
+                                        <select class="form-select border-gray-900 fs-6 py-12">
+                                            <option selected>-Choose access level-</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <hr class="mb-4">
+                                    <div class="mb-4">
+                                        <h5 class="fs-5 mb-3 fw-bold">Custom Access</h5>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                                name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+                                            <label class=" ms-3" for="vbtn-radio1 ">lecture</label>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                                name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                                            <label class=" ms-3" for="vbtn-radio2 ">Coupon</label>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                                name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                                            <label class=" ms-3" for="vbtn-radio3 ">Message</label>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                                name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+                                            <label class=" ms-3" for="vbtn-radio1 ">Setting</label>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <input type="checkbox" class=" checkbox-lg border border-gray-900 "
+                                                name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+                                            <label class=" ms-3" for="vbtn-radio1 ">task menu</label>
+                                        </div>
+                                    </div>
+                                    <hr class="mb-4">
+                                    <div class="mb-5">
+                                        <h5 class="fs-5 mb-3 fw-bold">Deactivate Account</h5>
+                                        <div class="d-flex  text-danger mb-20">
+
+                                            <span class="material-icons ">
+                                                warning
+                                            </span>
+                                            <p class="ms-2 mb-0 ">This cannot be undone!</p>
+
+                                        </div>
+
+                                        <a href="javascript:void(0);"
+                                            class=" d-block btn btn-outline-danger py-3">
+                                            Deactivate
+                                            This Account
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-0 p-0">
+                                    <button type="button" class="btn px-32 py-2 btn-outline-success "
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn px-32  py-2 btn-success ">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- watch -->
+                    <div class="modal fade" id="watch" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                        tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+
+                            <div class="modal-content  flex-row p-32">
+                                <div class=" border-0 flex-shrink-0">
+                                    <img src="assets/images/emir.jpeg" width="141" height="141" alt="emir">
+                                </div>
+                                <div class="modal-body py-0 pe-0 ps-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <p class="mb-0">#1</p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <h4 class="mb-0 fs-6">Admin</h4>
+                                    <h3 class="mb-2 fs-4 fw-bold">Emir Wicks</h3>
+                                    <small class="mb-3 d-block">emir.wicks@mail.com</small>
+
+                                    <div class="accordion-item border-0 ">
+
+                                        <button class="accordion-button collapsed p-0  bg-white shadow-none mb-36"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            <small class="text-gray-900">verified</small>
+                                        </button>
+
+
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class=" d-flex justify-content-between">
+                                                <button type="button" class="btn px-32 py-2 btn-outline-danger "
+                                                    data-bs-dismiss="modal">Deactivate</button>
+                                                <button type="button" class="btn px-32  py-2 ms-3 btn-success "
+                                                    data-bs-target="#edit" data-bs-toggle="modal"
+                                                    data-bs-dismiss="modal">Edit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+</div>
+
+</td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#2</td>
+    <td class="col-3">Zaina Goldsmith</td>
+    <td class="col-5 col-xl-4 text-break">zaina.goldsmith@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#3</td>
+    <td class="col-3">Mahima Lopez</td>
+    <td class="col-5 col-xl-4 text-break">Mahima.Lopez@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#4</td>
+    <td class="col-3">Pharrell Murray</td>
+    <td class="col-5 col-xl-4 text-break">Pharrell.Murray@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#5</td>
+    <td class="col-3">Annika Mcbride</td>
+    <td class="col-5 col-xl-4 text-break">Annika.Mcbride@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#6</td>
+    <td class="col-3">Fatimah Clark</td>
+    <td class="col-5 col-xl-4 text-break">Fatimah.Clark@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#7</td>
+    <td class="col-3">Klaudia Rhodes</td>
+    <td class="col-5 col-xl-4 text-break">Klaudia.Rhodes@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#8</td>
+    <td class="col-3">Tillie Lucero</td>
+    <td class="col-5 col-xl-4 text-break">Tillie.Lucero@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#9</td>
+    <td class="col-3">Sabrina Stephenson</td>
+    <td class="col-5  col-xl-4 text-break">Sabrina.Stephenson@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit
+        </a>
+    </td>
+</tr>
+<tr class="pt-20 pb-3 row g-0 border-bottom border-gray-400">
+    <td class="col-1 col-xl-2">#10</td>
+    <td class="col-3">Annie Smith</td>
+    <td class="col-5 col-xl-4 text-break">Annie.Smith@mail.com</td>
+    <td class="col-2 col-sm-1">Yes</td>
+    <td class="col-1 col-sm-2 d-flex flex-column flex-sm-row justify-content-end align-items-center ">
+        <a href="javascript:void(0);" class="material-icons mb-1 mb-sm-0">
+            remove_red_eye
+        </a>
+        <a href="javascript:void(0);" class="material-icons ms-0 ms-sm-4">
+            edit 
+        </a>
+    </td>
+</tr>
+</tbody>
+
+</table>
+
+<ul class="pagination col-12 d-flex justify-content-end">
+    <li class="page-item">
+        <a class="page-link  border-success text-success px-1" href="#" aria-label="Previous">
+            <span class="material-icons d-block ">
+                chevron_left
+            </span>
+        </a>
+    </li>
+    <li class="page-item"><a class="page-link border-success text-white bg-success" href="#">1</a></li>
+    <li class="page-item"><a class="page-link border-success text-success" href="#">2</a></li>
+    <li class="page-item"><a class="page-link border-success text-success" href="#">3</a></li>
+    <li class="page-item">
+        <a class="page-link border-success text-success px-1" href="#" aria-label="Next">
+            <span class="material-icons d-block">
+                chevron_right
+            </span>
+        </a>
+    </li>
+</ul>
+
+</div>

@@ -1,0 +1,271 @@
+---
+title: Assignment
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<section class="d-flex align-items-center justify-content-between mb-32">
+    <ul class="d-flex align-items-center list-unstyled mb-0 fw-bold ">
+        <li>
+            <h2 class="fs-4 mb-0">Assignment</h2>
+        </li>
+
+        <li class="ms-4 ms-md-32 position-relative">
+
+            <!-- <h3 class="fs-6 mb-0 me-3">All Courses </h3> -->
+            <!-- 
+                  
+                </span> -->
+            <a href="#" class=" material-icons text-success position-absolute top-50 end-0 translate-middle-y ">
+                expand_more</a>
+            <select class="form-select background-image-none border-0 pe-32 fs-6" aria-label="course">
+                <option value="All" selected>All Courses</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JQuery">JQuery</option>
+                <option value="JAvascript">JAvascript</option>
+            </select>
+
+
+        </li>
+    </ul>
+    <ul class="d-flex list-unstyled mb-0">
+        <li>
+            <a href="#" class="material-icons align-middle">
+                search
+            </a>
+        </li>
+        <li class="ms-4">
+            <a href="#" class="material-icons align-middle">
+                notifications
+            </a>
+        </li>
+    </ul>
+</section>
+
+<section class="row  g-3">
+    <div class="col-12 mb-1 d-flex justify-content-between align-items-center mt-0">
+        <div class="fs-6 position-relative">
+
+            <a href="#" class="material-icons  text-success  position-absolute top-50 end-0 translate-middle-y">
+                expand_more
+            </a>
+            <select class="form-select background-image-none border-0  ps-0 pe-3  fs-6  fw-bold " aria-label="comment"
+                id="">
+                <option value="Alldata" selected> <a href="#all" data-bs-toggle="list">All (4)</a> </option>
+                <option value="ch1"><a href="#ch1" data-bs-toggle="list">Chapter Assignment 1L</a></option>
+                <option value="ch2"> <a href="#ch2" data-bs-toggle="list">Chapter Assignment 2</a></option>
+                <option value="final"> <a href="#final" data-bs-toggle="list">Final Assignment</a> </option>
+            </select>
+
+
+        </div>
+        <p class="fs-8 mb-0">2 comments</p>
+    </div>
+    <div class="col-12 col-lg-3 mt-0 mb-4 ">
+
+        <ul class="list-unstyled mb-0 ">
+            <li class="d-flex justify-content-between border border-gray-400 p-12 bg-gray-100">
+                <div class=" fw-bold">
+                    <h4 class="mb-1 fs-8">Chapter Assignment 2</h4>
+                    <h5 class="fs-6 mb-0">Please check this file…</h5>
+                </div>
+                <div class="fs-8">
+                    <p class="mb-2  ">4 hrs ago</p>
+                    <p class="mb-0 text-gray-600">Emily Wang</p>
+                </div>
+            </li>
+            <li class="d-flex justify-content-between border border-gray-400 p-12 ">
+                <div class=" fw-bold">
+                    <h4 class="mb-1 fs-8">Chapter Assignment 1</h4>
+                    <h5 class="fs-6 mb-0">My Homework</h5>
+                </div>
+                <div class="fs-8">
+                    <p class="mb-2  ">12 hrs ago</p>
+                    <p class="mb-0 text-gray-600">David Xu</p>
+                </div>
+            </li>
+            <li class="d-flex justify-content-between border border-gray-400 p-12 ">
+                <div class=" fw-bold">
+                    <h4 class="mb-1 fs-8">Final Assignment</h4>
+                    <h5 class="fs-6 mb-0">Have a problem with this…</h5>
+                </div>
+                <div class="fs-8">
+                    <p class="mb-2  ">18 hrs ago</p>
+                    <p class="mb-0 text-gray-600">Tony Wei</p>
+                </div>
+            </li>
+            <li class="d-flex justify-content-between border border-gray-400 p-12 ">
+                <div class=" fw-bold">
+                    <h4 class="mb-1 fs-8">Final Assignment</h4>
+                    <h5 class="fs-6 mb-0">Did I do it right?</h5>
+                </div>
+                <div class="fs-8">
+                    <p class="mb-2  ">19 hrs ago</p>
+                    <p class="mb-0 text-gray-600">Christina Lin</p>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+    <div class="col-12 col-lg-9 assignment-text mt-0">
+        <div class="position-relative">
+            <div>
+                <div class=" card mb-3 ">
+                    <div class="card-header  d-flex justify-content-between align-items-center">
+                        <div class="">
+                            <h4 class="mb-1 fs-8">Chapter Assignment 2</h4>
+                            <h5 class="fs-6 mb-0 fw-bold">Please check this file…</h5>
+                        </div>
+                        <a href="javascript:void(0);" class="material-icons">
+                            more_vert
+                        </a>
+                    </div>
+                    <div class="card-body pe-32 pb-4 ">
+                        <div class="d-flex mb-3">
+                            <div class="mt-0 flex-shrink-0">
+
+                                <a href="#"> <img src="assets/images/emilywang.jpeg" width="40" height="40"
+                                        alt="emilywang" class="rounded-circle me-2"></a>
+
+                            </div>
+                            <div class="border-bottom border-gray-400 pb-3">
+                                <h4 class="mb-1 fs-6 fw-bold ">Emily Wang</h4>
+                                <p class="fs-8 text-gray-600">10:38 AM (4 hours ago)</p>
+                                <p class="fs-7 ">Hi Teacher, the attached file is my homework of chapter 2.
+                                    And
+                                    here comes a
+                                    question: Why in the
+                                    following code the height of the div is bigger than the height of the <code
+                                        class="text-success">img</code> ? There is a gap below
+                                    the image, but it doesn’t seems to be a padding/margin. <br> What is the gap or
+                                    extra
+                                    space
+                                    below image?</p>
+                                <div class="d-inline-block">
+                                    <a href="javascript:void(0)"
+                                        class="btn bg-gray-100    border border-gray-400 d-flex align-items-center"><span
+                                            class="material-icons me-2">
+                                            attach_file
+                                        </span><span class="fs-6 fw-bold">HW-2-David.zip</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="mt-0 flex-shrink-0">
+                                <a href="#"> <img src="assets/images/andychen.jpeg" width="40" height="40"
+                                        alt="andychen" class="rounded-circle me-2"></a>
+
+                            </div>
+                            <div class="">
+                                <h4 class="mb-1 fs-6 fw-bold ">Andy Chen (You)</h4>
+                                <p class="fs-8 text-gray-600">13:24 AM (1 hours ago)</p>
+                                <p class="fs-7 ">
+                                </p>
+                                <p class="mb-4">
+                                    Hi David, by default, an image is rendered inline, like a letter so it sits on
+                                    the
+                                    same
+                                    line
+                                    that a, b, c and d sit on. There is space below that line for the descenders you
+                                    find on
+                                    letters like g, j, p and q.
+                                </p>
+                                <p class="mb-4">You can: </p>
+                                <ul class="mb-0">
+                                    <li> adjust the <code class="text-success">vertical-align</code> of the image to
+                                        position it elsewhere (e.g. the <code class="text-success">middle </code>)
+                                        or </li>
+                                    <li>change the <code class="text-success">display </code> so it isn’t inline.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-between align-items-center ">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li class="me-4"><a href="javascript:void(0);" class="material-icons align-middle">
+                                chevron_left
+                            </a></li>
+                        <li><a href="javascript:void(0);" class="material-icons align-middle">
+                                chevron_right
+                            </a></li>
+                    </ul>
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li><a href="javascript:void(0);" class="btn px-32 py-2 btn-outline-success border-2">Mark as
+                                read</a>
+                        </li>
+                        <li class="ms-3"><a href="#" class="btn px-3 py-2 btn-success border-2 "
+                                id="reply-btn">Reply</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class=" position-absolute bottom-0 left-0 w-100 d-none  h-50 bg-white border border-gray-400 pb-3"
+                id="input-text">
+                <ul
+                    class="list-unstyled mb-0 d-flex align-items-center ps-4 py-3 border-bottom border-gray-400  bg-gray-100">
+                    <li class="d-flex align-items-center me-4  ">
+                        <p class="fw-bold mb-0 me-2">Body Text</p>
+                        <span class="material-icons">
+                            arrow_drop_down
+                        </span>
+                    </li>
+                    <li class="me-3">
+                        <a href="javascript:void(0);" class="material-icons align-middle">
+                            format_bold
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="javascript:void(0);" class="material-icons align-middle">
+                            format_italic
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="javascript:void(0);" class="material-icons align-middle">
+                            format_list_bulleted
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="javascript:void(0);" class="material-icons align-middle">
+                            format_list_numbered
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="javascript:void(0);" class="material-icons align-middle">
+                            image
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="javascript:void(0);" class="material-icons align-middle">
+                            insert_link
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="javascript:void(0);" class="material-icons align-middle">
+                            code
+                        </a>
+                    </li>
+                </ul>
+                <textarea name="answer" id="answer" cols="30" rows="7"
+                    class="w-100 px-4 pt-2 text-gray-400 textarea"></textarea>
+                <ul class="list-unstyled  d-flex justify-content-end align-items-center mb-0 pe-4">
+                    <li><a href="javascript:void(0);" class="btn px-32 py-2 btn-outline-success border-2"
+                            id="cancel-btn">Mark as read</a>
+                    </li>
+                    <li class="ms-3"><a href="javascript:void(0);" class="btn px-3 py-2 btn-success border-2 "
+                            id="submit">Reply</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
