@@ -6,8 +6,8 @@
 
     function navbar_changeBorder(el) {
         el.classList.remove('border-gray-100');
-        el.classList.add('border-success');
-        el.classList.add('text-success');
+        el.classList.add('border-primary');
+        el.classList.add('text-primary');
     }
     self.addEventListener('load', function () {
 
