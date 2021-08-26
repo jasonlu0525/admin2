@@ -1,10 +1,85 @@
----
-title: admin
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>admin</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="container-fluid ">
+    <div class="row g-0">
+      <nav class=" bg-gray-100 d-flex flex-column  justify-content-between col-12 col-md-4 col-xl-2 mb-3 mb-md-0 pt-32 pb-0  pb-md-32 vh-100">
+        <div class="  function-list">
+          <h1 class="ps-12 ps-md-4 ps-lg-32 mb-32"><a href="#" class="logo d-block ">ANSWER Admin</a></h1>
+          <ul class="list-unstyled ps-0 text-gray-900">
+            <li class="mb-32">
+              <a href="#" class="d-block ps-12 ps-md-4 ps-lg-32 d-flex align-items-center border-start border-gray-100 border-4  menu-link " id="Dashboard">
+                <span class="material-icons">
+                  insert_chart
+                </span>
+                <h3 class="fs-6 ps-3 mb-0">Dashboard</h3>
+              </a>
+            </li> 
+            <li class="mb-32">
+              <a href="#" class="d-block ps-12 ps-md-4 ps-lg-32 d-flex align-items-center border-start border-gray-100 border-4 menu-link " id="Question">
+                <span class="material-icons">
+                  question_answer
+                </span>
+                <h3 class="fs-6 ps-3 mb-0">Question</h3>
+              </a>
+            </li>
+            <li class="mb-32 ">
+              <a href="assignment.html" class="d-block ps-12 ps-md-4 ps-lg-32 border-start  border-gray-100 border-4 d-flex align-items-center menu-link" id="Assignment">
+                <span class="material-icons">
+                  assignment
+                </span>
+                <h3 class="fs-6 ps-3 mb-0  ">Assignment</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="d-block ps-12 ps-md-4 ps-lg-32 d-flex align-items-center border-start border-gray-100 border-4 menu-link mb-32" id="Course">
+                <span class="material-icons">
+                  video_library
+                </span>
+                <h3 class="fs-6 ps-3 mb-0">Course</h3>
+              </a>
+            </li>
+            <li>
+              <a href="admin.html" class="d-block ps-12 ps-md-4 ps-lg-32 d-flex align-items-center border-start border-gray-100 border-4 menu-link mb-32" id="Admin">
+                <span class="material-icons">
+                  people_alt
+                </span>
+                <h3 class="fs-6 ps-3 mb-0">Admin</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="d-block ps-12 ps-md-4 ps-lg-32 d-flex align-items-center border-start border-gray-100 border-4 menu-link" id="Settings">
+                <span class="material-icons">
+                  settings
+                </span>
+                <h3 class="fs-6 ps-3 mb-0">Settings</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <section class="user-message d-flex align-items-center ps-12 ps-md-4 ps-lg-32">
+          <a href="#">
+            <img src="assets/images/andychen.jpeg" alt="user andychen" width="40" height="40" class="rounded-circle">
+          </a>
+        
+          <div class="ms-3">
+            <h3 class="fw-bold fs-6 mb-1">Andy Chen</h3>
+            <small><a href="mailto:andy0401@mail.com">andy0401@mail.com</a></small>
+          </div>
+        </section>
+      </nav>
+      <main class="col-12 col-md-8 col-xl-10 px-md-2 py-md-32 p-lg-32">
+        
 <section class="d-flex align-items-center justify-content-between mb-32">
     <ul class="d-flex align-items-center list-unstyled mb-0 fw-bold text-gray-900">
         <li>
@@ -451,3 +526,18 @@ current: index
 </ul>
 
 </div>
+      </main>
+    </div>
+
+  </div>
+
+
+
+
+
+ 
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
